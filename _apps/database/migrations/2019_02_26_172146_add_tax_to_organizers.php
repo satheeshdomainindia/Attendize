@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTaxidToOrganisers extends Migration
+class AddTaxToOrganizers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,8 @@ class AddTaxidToOrganisers extends Migration
     public function up()
     {
         Schema::table('organisers', function($table) {
-            $table->string('taxid',100);
+            $table->string('tax_name')->default(15);
+            $table->float('tax_value')->nullable();
         });
     }
 
@@ -25,7 +26,8 @@ class AddTaxidToOrganisers extends Migration
     public function down()
     {
         Schema::table('organisers', function($table) {
-            $table->dropColumn('taxid');
+            $table->dropColumn('taxname');
+            $table->dropColumn('taxvalue');
         });
     }
 }

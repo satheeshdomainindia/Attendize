@@ -14,9 +14,6 @@ class AdditionalTaxFieldRenameCurrentTaxFields extends Migration
     {
         Schema::table('organisers', function (Blueprint $table) {
             $table->boolean('charge_tax')->default(0);
-            $table->renameColumn('taxname', 'tax_name');
-            $table->renameColumn('taxvalue', 'tax_value');
-            $table->renameColumn('taxid', 'tax_id');
         });
     }
 
