@@ -1,7 +1,7 @@
 <section id="location" class="container p0">
     <div class="row">
         <div class="col-md-12">
-            <div class="google-maps content">
+            <div class="content">
                 <h3>How to play:</h3>
 
                 <ul>
