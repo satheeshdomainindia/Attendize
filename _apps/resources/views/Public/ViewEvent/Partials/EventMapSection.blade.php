@@ -3,7 +3,7 @@
             <h1 class="section_head">  Description  </h1>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="content event_details" property="description">
                         <p>Players will be playing&nbsp;<strong>&quot;Classic - TPP - Solo&quot;</strong>&nbsp;in Custom Room on<strong>&nbsp;Asia Server.</strong></p>
                         <p>Check-in will start 15 min prior to the participant&#39;s round time.</p>
