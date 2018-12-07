@@ -1,5 +1,5 @@
 <section id="location" class="container">
-    <div class="row">
+        <div class="content event_details" property="description">
         
 
                 <div class="row">
