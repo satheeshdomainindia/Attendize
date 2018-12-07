@@ -49,6 +49,12 @@ Route::group(
         }
     ]);
 
+    Route::get('/push', [
+        function () {
+         echo   $data= shell_exec( '(cd '. base_path() .' && cd .. && /usr/bin/git status)' );
+        }
+    ]);
+
 
 
     Route::group(['middleware' => ['installed']], function () {
