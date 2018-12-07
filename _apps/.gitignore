@@ -10,7 +10,8 @@ installed
 /.buildpath
 /composer.phar
 /stroage/database.sqlite
-composer.lock
+*.lock
+
 _ide_helper.php
 *.swp
 
