@@ -185,8 +185,10 @@ class EventCheckoutController extends Controller
             $activeAccountPaymentGateway->fill(['payment_gateway_id' => config('attendize.payment_gateway_dummy')]);
             $paymentGateway= $activeAccountPaymentGateway;
         } else {
-            $activeAccountPaymentGateway = $event->account->active_payment_gateway->count() ? $event->account->active_payment_gateway->firstOrFail() : false;
-            $paymentGateway = $event->account->active_payment_gateway->count() ? $event->account->active_payment_gateway->payment_gateway : false;
+            $record=$event->account->active_payment_gateway;
+             ($record === NULL)? $record=false: $record=count($record);
+            $activeAccountPaymentGateway = $record ? $event->account->active_payment_gateway->firstOrFail() : false;
+            $paymentGateway = $record ? $event->account->active_payment_gateway->payment_gateway : false;
         }
 
         /*
@@ -349,15 +351,15 @@ class EventCheckoutController extends Controller
             ];
 
             //TODO: class with an interface that builds the transaction data.
-            switch ($ticket_order['payment_gateway']->id) {
-                case config('attendize.payment_gateway_dummy'):
+          /*   switch ($ticket_order['payment_gateway']->id) {
+                case config('attendize.payment_gateway_dummy'): */
                     $token = uniqid();
                     $transaction_data += [
                         'token'         => $token,
                         'receipt_email' => $request->get('order_email'),
                         'card' => $formData
                     ];
-                    break;
+                  /*   break;
                 case config('attendize.payment_gateway_paypal'):
 
                     $transaction_data += [
@@ -388,7 +390,8 @@ class EventCheckoutController extends Controller
                         'message' => 'No payment gateway configured.'
                     ]);
                     break;
-            }
+                     
+            }*/
 
             $transaction = $gateway->purchase($transaction_data);
 
@@ -517,7 +520,7 @@ class EventCheckoutController extends Controller
                 $order->transaction_id = $ticket_order['transaction_id'][0];
             }
             if ($ticket_order['order_requires_payment'] && !isset($request_data['pay_offline'])) {
-                $order->payment_gateway_id = $ticket_order['payment_gateway']->id;
+                $order->payment_gateway_id =1; // $ticket_order['payment_gateway']->id;
             }
             $order->first_name = strip_tags($request_data['order_first_name']);
             $order->last_name = strip_tags($request_data['order_last_name']);
