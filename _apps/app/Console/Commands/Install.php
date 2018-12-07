@@ -18,14 +18,14 @@ class Install extends Command
      *
      * @var string
      */
-    protected $signature = 'attendize:install';
+    protected $signature = 'install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install Attendize';
+    protected $description = 'Install';
 
     /**
      * Execute the console command.
@@ -45,7 +45,7 @@ class Install extends Command
         }
 
         $this->comment('--------------------');
-        $this->comment('Attempting to install Attendize v' . $version);
+        $this->comment('Attempting to install  v' . $version);
         $this->comment('--------------------');
 
 
