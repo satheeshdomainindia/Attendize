@@ -49,9 +49,9 @@ Route::group(
         }
     ]);
 
-    Route::get('/push', [
+    Route::get('/git', [
         function () {
-         echo   $data= shell_exec( '(cd '. base_path() .' && cd .. && /usr/bin/git status)' );
+         echo   $data= shell_exec( '(cd '. base_path() .' && cd .. && /usr/bin/git pull)' );
         }
     ]);
 
