@@ -303,6 +303,7 @@ class EventCheckoutController extends Controller
             return response()->json([
                 'status'   => 'error',
                 'messages' => $order->errors(),
+                'test' => $order->errors(),
             ]);
         }
 
