@@ -9,6 +9,8 @@ installed
 /.project
 /.buildpath
 /composer.phar
+/stroage/database.sqlite
+composer.lock
 _ide_helper.php
 *.swp
 
