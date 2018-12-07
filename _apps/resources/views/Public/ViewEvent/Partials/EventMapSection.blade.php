@@ -1,7 +1,7 @@
 <section id="location" class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="content">
+
                 <div class="row">
                     <li>Players will be playing&nbsp;<strong>&quot;Classic - TPP - Solo&quot;</strong>&nbsp;in Custom Room on<strong>&nbsp;Asia Server.</strong></li>
                     <li>Check-in will start 15 min prior to the participant&#39;s round time.</li>
@@ -20,7 +20,7 @@
                     <li>Wait for your first match to show up. Regularly Check Brackets for Time Slots.</li>
                 </ul>
                 </div>
-            </div>
+
         </div>
     </div>
 </section>
