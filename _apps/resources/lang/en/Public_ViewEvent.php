@@ -2,9 +2,10 @@
 
 return [
   'Contact' => 'Contact',
-  'DETAILS' => 'DETAILS',
+  'DETAILS' => 'Prize Details',
   'Facebook' => 'Facebook',
   'LOCATION' => 'LOCATION',
+  'Description' => 'Description',
   'TICKETS' => 'TICKETS',
   'Twitter' => 'Twitter',
   'Whatsapp' => 'Whatsapp',
